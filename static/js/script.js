@@ -3,6 +3,10 @@ $(document).ready(function(){
     $('.collapsible').collapsible({
       accordion: false
     });
+    $('.tooltipped').tooltip();
+    $('.collapsible').collapsible({
+      accordion: false
+    });
   });
 
   
