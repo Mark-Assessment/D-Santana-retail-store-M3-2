@@ -7,6 +7,7 @@ $(document).ready(function(){
     $('.collapsible').collapsible({
       accordion: false
     });
+    $('select').formSelect();
     $('.datepicker').datepicker({
       format: "data mmm, yyyy",
       yearRange: 3,
