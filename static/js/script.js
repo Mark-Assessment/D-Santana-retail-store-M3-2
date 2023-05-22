@@ -7,6 +7,14 @@ $(document).ready(function(){
     $('.collapsible').collapsible({
       accordion: false
     });
+    $('.datepicker').datepicker({
+      format: "data mmm, yyyy",
+      yearRange: 3,
+      showClearBtn: true,
+      i18n: {
+        done: "Select"
+      }
+    });
   });
 
   
