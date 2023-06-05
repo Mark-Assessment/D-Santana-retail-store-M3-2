@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
     $('select').formSelect();
     $('.datepicker').datepicker({
-      format: "data mmm, yyyy",
+      format: "yyyy-mm-dd",
       yearRange: 3,
       showClearBtn: true,
       i18n: {
@@ -17,8 +17,9 @@ $(document).ready(function(){
       }
     });
     $('.parallax').parallax();
+      });
     
-  });
+
 
 
   
