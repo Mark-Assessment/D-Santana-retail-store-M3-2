@@ -19,39 +19,16 @@
                 <h3 class="">
                     My Team
                 </h3>
-                <ul class="collection">
+                <ul class="collection ">
+                    {% for user in users %}
                     <li class="collection-item avatar">
-                        <img src="static/images/profile-picture-1.png" alt="picture-1" class="circle">
-                        <span class="title">Department</span>
-                        <p>Retail <br>
-                            Supervisor in Covent Garden
+                        <i class="fa-solid fa-user"></i>
+                            {{ user.department }}
+                            <span class="title"></span>
+                        <p>{{ user.username }} <br>
                         </p>
-                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
                     </li>
-                    <li class="collection-item avatar">
-                        <i class="material-icons circle">folder</i>
-                        <span class="title">Title</span>
-                        <p>First Line <br>
-                            Second Line
-                        </p>
-                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                    </li>
-                    <li class="collection-item avatar">
-                        <i class="material-icons circle green">insert_chart</i>
-                        <span class="title">Title</span>
-                        <p>First Line <br>
-                            Second Line
-                        </p>
-                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                    </li>
-                    <li class="collection-item avatar">
-                        <i class="material-icons circle red">play_arrow</i>
-                        <span class="title">Title</span>
-                        <p>First Line <br>
-                            Second Line
-                        </p>
-                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="custom-div divtwo hoverable">
