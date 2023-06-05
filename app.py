@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -23,6 +24,8 @@ mongo = PyMongo(app)
 def get_tasks():
     tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
+
+
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -84,15 +87,20 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from the database
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    users = mongo.db.users.find() 
-
-    if session["user"]:        
-        return render_template("profile.html", username=username, users=users)
-
-    return redirect(url_for("login"))       
+    # Check if user is logged in
+    if "user" in session:
+        # Grab the session user's username from the database
+        user = mongo.db.users.find_one({"username": session["user"]})
+        if user:
+            username = user["username"]
+            today = datetime.date.today()
+            tasks = mongo.db.tasks.find({"due_date": today.strftime("%Y-%m-%d")})
+            users = mongo.db.users.find()
+            return render_template("profile.html", username=username, users=users, tasks=tasks)
+    
+    # User is not logged in, redirect to the login page
+    return redirect(url_for("login"))
+   
 
 
 @app.route("/logout")

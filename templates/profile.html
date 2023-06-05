@@ -35,6 +35,15 @@
                 <h3 class="">
                     My Daily Tasks
                 </h3>
+                <ul class="collection">
+                    {% for task in tasks %}
+                    <li class="collection-item">
+                        <span class="task-name">{{ task.task_name }}</span>
+                        <p class="task-description">{{ task.task_description }}</p>
+                        <p class="created-by">Created by: {{ task.created_by }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
