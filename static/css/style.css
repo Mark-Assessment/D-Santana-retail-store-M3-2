@@ -37,3 +37,29 @@ body {
     margin: 5px;
     line-height: 42px;
 }
+
+/* Admin Overview Page div style */
+.custom-parent-div {
+    margin: 0 10%;
+    display: flex;
+  }
+  
+  .custom-div {
+    height: 80vh;
+    /* 80% of the viewport height */
+    width: 40vw;
+    /* 40% of the viewport width */
+    margin: 0 2%;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .divone {
+    background-color: yellow;
+  }
+  
+  .divtwo {
+    background-color: blue;
+  }
