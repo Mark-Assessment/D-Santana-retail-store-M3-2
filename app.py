@@ -71,7 +71,7 @@ def login():
                 flash("Welcome Back, {}".format(
                     request.form.get("username")))
                 return redirect(url_for(
-                    "profile", username=session["user"]))
+                    "get_tasks", username=session["user"]))
             else:
                 # User invalid password match
                 flash("Incorrect Username and/or Password")
