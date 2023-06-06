@@ -148,8 +148,8 @@ def edit_task(task_id):
         flash("Task Successfully Updated")
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    categories = mongo.db.categories.find().sort("status", 1)
-    return render_template("edit_task.html", task=task, categories=categories)
+    users = mongo.db.users.find().sort("status", 1)
+    return render_template("edit_task.html", task=task, users=users)
 
 
 # Delete function for manage categories section with admin user

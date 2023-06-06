@@ -27,6 +27,9 @@
             <strong>{{ task.category_name }}</strong>
             <p>{{ task.task_description }}</p>
             <p><em>assigned to: {{ task.assigned_to }}</em></p>
+            {% if session.user|lower == "administrator" %}
+            <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small green">Edit</a>
+            {% endif %}
         </div>
     </li>
     {% endfor %}
