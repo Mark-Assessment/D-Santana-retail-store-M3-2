@@ -116,8 +116,9 @@ def add_task():
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         task = {
-            "category_name": request.form.get("category_name"),
+            "status": "In Progress",
             "task_name": request.form.get("task_name"),
+            "assigned_to": request.form.get("user_name"),
             "task_description": request.form.get("task_description"),
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date"),
@@ -127,8 +128,8 @@ def add_task():
         flash("Task Successfully Added")
         return redirect(url_for("get_tasks"))
 
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_task.html", categories=categories)
+    users = mongo.db.users.find().sort("status", 1)
+    return render_template("add_task.html", users=users)
 
 
 @app.route("/edit_task/<task_id>", methods=["GET", "POST"])
@@ -136,7 +137,7 @@ def edit_task(task_id):
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         submit = {
-            "category_name": request.form.get("category_name"),
+            "status": request.form.get("status"),
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
             "is_urgent": is_urgent,
@@ -147,7 +148,7 @@ def edit_task(task_id):
         flash("Task Successfully Updated")
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    categories = mongo.db.categories.find().sort("category_name", 1)
+    categories = mongo.db.categories.find().sort("status", 1)
     return render_template("edit_task.html", task=task, categories=categories)
 
 
@@ -161,7 +162,7 @@ def delete_task(task_id):
 
 @app.route("/get_categories")
 def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    categories = list(mongo.db.categories.find().sort("status", 1))
     return render_template("categories.html", categories=categories)
 
 
@@ -170,7 +171,7 @@ def get_categories():
 def add_category():
     if request.method == "POST":
         category = {
-            "category_name": request.form.get("category_name")
+            "status": request.form.get("status")
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
@@ -183,7 +184,7 @@ def add_category():
 def edit_category(category_id):
     if request.method == "POST":
         submit = {
-            "category_name": request.form.get("category_name")
+            "status": request.form.get("status")
         }
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
         flash("Category Successfully Updated")
