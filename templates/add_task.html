@@ -13,7 +13,7 @@
                 <select id="user_name" name="user_name" class="validate" required>
                     <option value="" disabled selected>Select team member to assign task to</option>
                     {% for user in users %}
-                        <option value="{{ user.name }}">{{ user.name }}</option>
+                        <option value="{{ user.username }}">{{ user.name }}</option>
                     {% endfor %}
                 </select>
                 <label for="user_name">Assigned User</label>
