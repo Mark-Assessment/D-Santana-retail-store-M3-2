@@ -12,8 +12,6 @@ The application aims to be intuitive and simple for all users .
 * On the Home page of this website, new users will find a brief explanation of its purpose and it features a convenient link that directs users to the login page, where they can register or access their accounts and explore the full range of features and benefits offered.
 * All users can see the corresponding tasks assigned to them  once logged in and can updated the status of a task .
 * The 'admin' which will be the username cater to a general manager posistion in the shop(username:administrator password:123456) has more options of editing ,deleting , creating new tasks, checking all team members name and task attached to the them .
-* All users have acces (once logged in) to a FAQ with key points to know how to use the website.
-
 
 
 ***
@@ -22,9 +20,9 @@ The application aims to be intuitive and simple for all users .
 
 ### New User Stories
 
-* As a new user, I want to quickly understand the purpose of the site so that I can decide if it provides value to me.
-* As a new user, I want to be able to quickly understand how to use the application to meet my needs.
-* As a new user, I want clear instructions on how to log the pool test
+* As a new user : Understanding the purpose I want to quickly grasp the website's purpose and determine if it provides value to me.
+* As a new user : User-friendliness is important and  I want the application to be easy to use and navigate. It should provide intuitive features and functionalities that align with my needs as a user. 
+* As a new user: Clear instructions for tasks specifically, I want to be guided on how to updated the status of a task given to me .It is essential for me to have step-by-step instructions that are easy to follow.
 
 
 ### Returning User Stories
