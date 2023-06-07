@@ -37,15 +37,16 @@ The application aims to be intuitive and simple for all users .
 
 ### Design
 
-The site uses the Materialize framework. I used Materialize's orange colour pallete as it resembles the colors produced when completing a pH test for a swimming pool with a comparitor.
+The site uses the Materialize framework. I used Materialize's purple darken and accent color palette the choice of using purple as the primary color for the retail store task tracker on the website is purposeful and aligns with the design philosophy.
+
 
 #### Colours and Shades
 
-* The site uses a dark shades of orange for the site’s header and footer, and a lighter shade for the LogIn/SignUp buttons.
+* The site uses a #4a148c purple darken-3 for the navbar in mobile and desktop devices.
 
-* The color of the background is white and text is black to reinforce the contrast and make it easier to read for the user.
+* The color of the background is white and text is black and white to help and make it easier to read for the user.
 
-![Orange Pallette](static/documentation_images/orange_materialize.png)
+![Purple Pallette](static/images/colour-palette-purple.png)
 
 * I’ve tried to use relevant Icons and animations througout the site, specially on laptop/desktop devices where the navbar icons have a drop-like animation.
 
