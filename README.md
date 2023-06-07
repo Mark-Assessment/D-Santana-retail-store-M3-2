@@ -4,7 +4,7 @@
 
 [Visit the live site](https://pooltesting-buddy.onrender.com).
 
-The purpose of this application is to facilitate the completion of day-to-day tasks for managers and supervisors in a retail store, thereby enhancing operational efficiency.
+The purpose of this application is to facilitate the completion of day-to-day tasks for managers, supervisors and keyholders in a retail store, thereby enhancing operational efficiency.
 
 This website, meticulously designed and developed, empowers users to seamlessly assign and delegate tasks to various team members, streamlining the store's workflow management process.
 
@@ -27,11 +27,12 @@ The application aims to be intuitive and simple for all users .
 
 ### Returning User Stories
 
-* As a returning user, I want to be able to quickly access the features I’m interested in.
-* As a returning user, I want to know where to look for more information on how to complete a pool test if I feel unsure
-* As a returning admin user, I want to be able to easily access and manage the data I’ve saved in the application.
-* As a returning admin user, I want to be able to easily access and delete the data other users have saved in the application.
-
+* As a returning admin user 'Manager or Supervisor': The website provides me with a platform to assign and track tasks for my team, ensuring that tasks are completed promptly and efficiently.
+* As a returning user 'Keyholder': Responsible for overseeing daily operations in the shopfloor and helping the management team it is important for me to comeback and use the website in a convenient way to stay organized and accountable .
+* As a returning user 'Keyholder': I can easily track and complete my routine checks, ensuring that critical tasks are not overlooked so the website becomes a reliable tool that helps me maintain a structured approach to my responsibilities.
+* As a returning admin user: I want to be able to easily access and delete the data other users have saved in the application.
+* As a returning admin user: The website provides valuable insights and analytics that allow me to make data-driven decisions.
+* As a returning admin user: I can gain a deeper understanding of the store's operations. These insights enable me to identify trends, make informed decisions, and implement strategies that drive business growth
 
 
 ### Design
