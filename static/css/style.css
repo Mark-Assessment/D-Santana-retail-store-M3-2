@@ -1,6 +1,6 @@
 /* Website body custom color*/
 body {
-    background-color: #fffff;
+    background-color: white;
 }
 
 /* Navbar custom style*/
@@ -54,12 +54,10 @@ body {
     box-sizing: border-box;
   }
   
-  
-  
   .divone {
-    background-color: yellow;
+    background-color: #d292e5;
   }
   
   .divtwo {
-    background-color: blue;
+    background-color: #d292e5;
   }
