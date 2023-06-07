@@ -189,19 +189,19 @@ def edit_category(user_id):
             "name": request.form.get("name"),
             "department": request.form.get("department")
         }
-        mongo.db.users.update({"_id": ObjectId(user_id)}, submit)
+        mongo.db.users.update_one({"_id": ObjectId(user_id)}, {"$set": submit})
         flash("User Successfully Updated")
         return redirect(url_for("get_categories"))
 
-    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template("edit_category.html", category=category)
+    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    return render_template("edit_category.html", user=user)
 
 
 # Delete function for button in Add category section
-@app.route("/delete_category/<category_id>")
-def delete_category(category_id):
-    mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash("Category Successfully Deleted")
+@app.route("/delete_category/<user_id>")
+def delete_category(user_id):
+    mongo.db.users.delete_one({"_id": ObjectId(user_id)})
+    flash("User Successfully Deleted")
     return redirect(url_for("get_categories"))
 
 
