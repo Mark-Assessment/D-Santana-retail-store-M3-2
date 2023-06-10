@@ -70,6 +70,8 @@ The site uses the Materialize framework. I used Materialize's purple darken and 
 
 * [Pexels](https://www.pexels.com/) I used a retail shop image for the home page.(static/images/background-picture.png)
 
+* [Unsplash](https://unsplash.com/) I used a welcome picture for the Log in page.(static/images/welcome-picture-login.png)
+
 ### Wireframes
 
 The site is responsively designed to adapt to the user's viewing device.
