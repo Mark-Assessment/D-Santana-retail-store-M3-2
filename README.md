@@ -83,23 +83,36 @@ The site is responsively designed to adapt to the user's viewing device.
 
 ## Home Desktop view
 
- ![Home desktop view](static/documentation_images/home_logged_out.png)
+ ![Home desktop view](static/images/desktop-image.png)
+
+# Home Desktop view
+
+ ![Home Tablets view](static/images/ipad-image-home.png)
+
 
  ## Mobile Home view
 
- ![Mobile Home view](static/documentation_images/mobile_view_home.png)
+ ![Mobile Home view](static/images/phone-image-home.png)
  
  ## Home log in desktop view
 
- ![Home desktop view](static/documentation_images/login_wireframe.png)  
+ ![Home desktop view](static/images/desk-login.png)  
+
+  ## Home log in tablets view
+
+ ![Home desktop view](static/images/tablet-login.png)  
+
+  ## Home log in phone view
+
+ ![Home desktop view](static/images/add-tasks.png)  
 
   ## Home sign up desktop view
 
- ![Home desktop view](static/documentation_images/Sign_up_wireframe.png)  
+ ![Home desktop view]()  
 
  ## New pool test desktop view
 
- ![New pooltest view](static/documentation_images/add_pool_test.png)  
+ ![New pooltest view]()  
 ***
 
 ## Features
