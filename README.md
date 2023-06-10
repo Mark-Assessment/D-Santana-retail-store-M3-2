@@ -61,16 +61,14 @@ The site uses the Materialize framework. I used Materialize's purple darken and 
 
 #### Typography
 
-* The site logo uses the Lobster font [Lobster font](https://fonts.google.com/specimen/Lobster) from Google Fonts. This font was selected for its high legibility and simple yet elegant design.
-* All other text on the site uses the standard Materialize framework font stack, which consists of a number of simple, legible sans-serif fonts targeted at a range of different viewing devices and operating systems.
+* The site logo uses the Poppins font [Poppins font](https://fonts.google.com/specimen/Poppins) from Google Fonts. Poppins is a versatile and elegant font that can work well for a luxury shop website. Clean and Modern: Poppins has a clean and modern appearance, which aligns well with the aesthetics of this websites retail luxury brand. It carries a sense of sophistication and refinement.
+* All other text on the site uses the standard Materialize framework font stack, which consists of legible sans-serif fonts.
 
 #### Imagery
 
 * [Font Awesome 6](https://fontawesome.com/) icons are used throughout the site to illustrate buttons.
 
-* The “Pool testing guide” section of the Getting Started page is illustrated with fontawesome icons as well.
-
-* [Unsplash ](https://unsplash.com/) I used a swimming pool image used for the home page.(https://unsplash.com/photos/nq18MYhxdGs)
+* [Pexels](https://www.pexels.com/) I used a retail shop image for the home page.(static/images/background-picture.png)
 
 ### Wireframes
 
