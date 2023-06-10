@@ -16,9 +16,8 @@ $(document).ready(function(){
         done: "Select"
       }
     });
-    $('.parallax').parallax();
-      });
-    
+   
+  
 
 
 
