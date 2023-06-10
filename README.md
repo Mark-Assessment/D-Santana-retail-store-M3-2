@@ -48,11 +48,9 @@ The site uses the Materialize framework. I used Materialize's purple darken and 
 
 ![Purple Pallette](static/images/colour-palette-purple.png)
 
-* I’ve tried to use relevant Icons and animations througout the site, specially on laptop/desktop devices where the navbar icons have a drop-like animation.
-
 * In the home page I've used materialize's Parallax to give a 'going underwater' illusion whenever the user scrolls down.
 
-![Parallax materialize](static/documentation_images/parallax_materialize.png)
+![Parallax materialize](static/images/sodapdf-converted.png)
 
 
 * Colours are used consistently in association with a particular type of task:

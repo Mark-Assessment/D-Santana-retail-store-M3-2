@@ -26,8 +26,6 @@ def get_tasks():
     return render_template("tasks.html", tasks=tasks)
 
 
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -147,10 +145,34 @@ def edit_task(task_id):
         }
         mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {"$set": submit})
         flash("Task Successfully Updated")
+        return redirect(url_for("get_tasks"))
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     users = mongo.db.users.find().sort("status", 1)
-    return render_template("edit_task.html", task=task, users=users)
+    categories = mongo.db.categories.find().sort("status", 1)
+    return render_template("edit_task.html", task=task, users=users, categories=categories)
+
+
+@app.route("/edit_task_status/<task_id>", methods=["GET", "POST"])
+def edit_task_status(task_id):
+    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    if request.method == "POST":
+        submit = {
+            "status": request.form.get("status"),
+            "task_name": task["task_name"],
+            "task_description": task["task_description"],
+            "is_urgent": task["is_urgent"],
+            "due_date":task["due_date"],
+            "created_by": task["created_by"],
+            "assigned_to": task["assigned_to"],
+        }
+        mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {"$set": submit})
+        flash("Task Successfully Updated")
+        return redirect(url_for("get_tasks"))
+  
+    categories = mongo.db.categories.find().sort("status", 1)
+    return render_template("edit_task_status.html", task=task, categories=categories)
+
 
 
 # Delete function for manage categories section with admin user
