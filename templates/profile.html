@@ -13,43 +13,46 @@
         </div>
     </div>
 </div>
-<!-- admin div design -->
-<div class="row ">
-    <div class="col s12 center-align">
-        <div class="custom-parent-div">
-            <div class="custom-div divone hoverable">
-                <h3 class="">
-                    My Team
-                </h3>
-                <ul class="collection ">
-                    {% for user in users %}
-                    <li class="collection-item avatar">
-                        <i class="fa-solid fa-user"></i>
-                            {{ user.department }}
-                            <span class="title"></span>
-                        <p>{{ user.username }} <br>
-                        </p>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="custom-div divtwo hoverable">
-                <h3 class="">
-                    My Daily Tasks
-                </h3>
-                <ul class="collection">
-                    {% for task in tasks %}
-                    <li class="collection-item">
-                        <span class="task-name">{{ task.task_name }}</span>
-                        <p class="task-description">{{ task.task_description }}</p>
-                        <p class="created-by">Created by: {{ task.created_by }}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+
+<div class="row">
+    <div class="col s12 l6">
+      <!-- Content for the first div -->
+      <h3 class="">
+        My Team
+    </h3>
+    <ul class="collection ">
+        {% for user in users %}
+        <li class="collection-item avatar">
+            <i class="fa-solid fa-gear"></i>
+                {{ user.department }}
+                <span class="title"></span>
+            <br>
+            <br>
+            <i class="fa-solid fa-user"></i>
+            <p>{{ user.username }}
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
     </div>
-</div>
+    <div class="col s12 l6">
+      <!-- Content for the second div -->
+      <h3 class="">
+        My Daily Tasks
+    </h3>
+    <ul class="collection">
+        {% for task in tasks %}
+        <li class="collection-item">
+            <i class="fa-solid fa-check fa-xl"> </i>
+            <span class="task-name">Name: {{ task.task_name }}</span>
+            <p class="task-description">Description: {{ task.task_description }}</p>
+            <p class="created-by">Created by: {{ task.created_by }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+  </div>
+  
 
 {% else %}
 
