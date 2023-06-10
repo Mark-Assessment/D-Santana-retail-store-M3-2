@@ -48,7 +48,7 @@ def register():
         # Put the new user into the 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("get_tasks", username=session["user"]))
 
       # Retrieve users from the database
     return render_template("register.html")

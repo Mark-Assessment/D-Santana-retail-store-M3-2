@@ -16,9 +16,5 @@ $(document).ready(function(){
         done: "Select"
       }
     });
-   
-  
-
-
-
+  });
   
