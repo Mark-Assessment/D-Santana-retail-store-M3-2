@@ -46,16 +46,21 @@ The site uses the Materialize framework. I used Materialize's purple darken and 
 
 * The color of the background is white and text is black and white to help and make it easier to read for the user.
 
+
 ![Purple Pallette](static/images/colour-palette-purple.png)
 
 * Colours are used consistently in association with a particular type of editing /deleting task.
 
 * Light blue is used on the change status  buttons
 ![Buttons colours according to function](static/images/change-status.png)
+
+
 * Light blue and pink is used for editing and deleting a task from the admin user.
 ![Buttons colours according to function](static/images/edit-delete-admin.png)
+
+
 * Lighter purple to add new tasks from the admin user.
-![Buttons colours according to function](static/images/change-status.png)
+![Buttons colours according to function](static/images/add-tasks.png)
 
 
 
