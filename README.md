@@ -94,25 +94,32 @@ The site is responsively designed to adapt to the user's viewing device.
 
  ![Mobile Home view](static/images/phone-image-home.png)
  
- ## Home log in desktop view
+ ## log in desktop view
 
  ![Home desktop view](static/images/desk-login.png)  
 
-  ## Home log in tablets view
+  ## log in tablets view
 
  ![Home desktop view](static/images/tablet-login.png)  
 
-  ## Home log in phone view
+  ## log in phone view
 
  ![Home desktop view](static/images/add-tasks.png)  
 
-  ## Home sign up desktop view
+  ## Sign Up desktop view
 
- ![Home desktop view]()  
+ ![Home desktop view](static/images/add-tasks.png)  
 
- ## New pool test desktop view
+ ## Sign Up tablet view
 
- ![New pooltest view]()  
+ ![Home desktop view](static/images/registration-form-ipad.png)  
+
+ ## Sign Up phone view
+
+ ![Home desktop view](static/images/registration-form-phone.png)  
+
+
+ 
 ***
 
 ## Features
