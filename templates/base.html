@@ -49,15 +49,15 @@
             <li> <h4 class="center-align light-white-text">Task Tracker</h4></li>
             <li><a href="{{ url_for('get_tasks') }}" class="white-text">Home</a></li>
             {% if session.user %}
-                 <li><a href="{{ url_for('profile', username=session['user']) }}">Overview</a></li>
-                 <li><a href="{{ url_for('add_task') }}">New Task</a></li>
-                 {% if session.user|lower == "administrator"|lower %}
-                    <li><a href="{{ url_for('get_categories') }}">Manage Team</a></li>
-                 {% endif %}
-                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% if session.user|lower == "administrator"|lower %}
+            <li><a href="{{ url_for('profile', username=session['user']) }}" class="white-text">Overview</a></li>
+            <li><a href="{{ url_for('add_task') }}"class="white-text" >New Task</a></li>
+            <li><a href="{{ url_for('get_categories') }}" class="white-text">Manage Team</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('logout') }}" class="white-text">Log Out</a></li>
             {% else %}
-                 <li><a href="{{ url_for('login') }}">Log In </a></li>
-                 <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}" class="white-text">Log In </a></li>
+            <li><a href="{{ url_for('register') }}" class="white-text">Register</a></li>
             {% endif %}
         </div>
         </ul>
