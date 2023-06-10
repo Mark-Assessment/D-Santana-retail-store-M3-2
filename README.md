@@ -126,7 +126,8 @@ The site is responsively designed to adapt to the user's viewing device.
 
 ### User Accounts
 
-PoolTest Buddy features a user account system whereby users can create a persistent account, accessed by username and password, and store tests associated with their account.
+Task Manager features a user account system that allows ordinary users to create an account using a unique username and password. Once logged in, users can update the status of their assigned tasks. If no tasks have been assigned to them, they can still view all tasks on the website but cannot update their status.
+There is only one admin user on the website who has the following privileges: creating tasks and assigning them to each team member, specifying deadlines and departments if urgent. The admin user can also edit existing tasks in the database and delete them as needed. Furthermore, the admin user has access to the overview page, which includes two different charts: "My Daily Charts" and a chart displaying team members' names and departments.
 
 * Users create accounts by filling in a simple registration form.
 
