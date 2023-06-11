@@ -3,6 +3,9 @@ $(document).ready(function(){
     $('.collapsible').collapsible({
       accordion: false
     });
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });  
     $('.tooltipped').tooltip();
     $('.collapsible').collapsible({
       accordion: false
@@ -17,4 +20,5 @@ $(document).ready(function(){
       }
     });
   });
+
   
