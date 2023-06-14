@@ -85,7 +85,7 @@ The site is responsively designed to adapt to the user's viewing device.
 
  ![Home desktop view](static/images/desktop-image.png)
 
-# Home Desktop view
+# Home Tablet view
 
  ![Home Tablets view](static/images/ipad-image-home.png)
 
@@ -104,11 +104,11 @@ The site is responsively designed to adapt to the user's viewing device.
 
   ## log in phone view
 
- ![Home desktop view](static/images/add-tasks.png)  
+ ![Home desktop view](static/images/phone-login.png)  
 
   ## Sign Up desktop view
 
- ![Home desktop view](static/images/add-tasks.png)  
+ ![Home desktop view](static/images/desktop-registration.png)  
 
  ## Sign Up tablet view
 
