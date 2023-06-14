@@ -167,7 +167,7 @@ def edit_task_status(task_id):
             "task_name": task["task_name"],
             "task_description": task["task_description"],
             "is_urgent": task["is_urgent"],
-            "due_date":task["due_date"],
+            "due_date": task["due_date"],
             "created_by": task["created_by"],
             "assigned_to": task["assigned_to"],
         }

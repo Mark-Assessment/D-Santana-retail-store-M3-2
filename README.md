@@ -269,34 +269,46 @@ The following features could be added in the future, given more development time
 ---
 ## Issues found during site development
 
-* ### Edit reading page not pre-populating the previously selection
+* ### Tasks not showing up when user signed in
 
 
-![testing-issue-1](static/documentation_images/pre_populating_edit.png)
+![testing before](static/images/error_one_inviaible_task_fe.png)
 
-When clicking on the 'edit' button on a previously recorded pool test, I noticed that the right fields were not being selected and on some ocassions not even appearing on the select fields
-
-> I fixed this by adding the 'value' attribute to the options tag and populating it with the correct Jinja expression to access the relevant data.
-
+On the homepage for logged in users the tasks were not being passed to the front end , resulting in an empty page
+> I fixed this by passing the task table on the appropiate route.
 
 
-* ### Logo overflowing on small and extra small devices
-
-> I fixed this by adding a media query which removes the logo completely by setting the display to 'none' when in small devices.
-
-![resolved4](static/documentation_images/media_query_fix.png)
+![Issue fixed](static/images/error_one_invisible_tasks.png)
 
 
-* ### Login not working.
+* ### Task form being updated incorrectly
 
-![testing_issue_2](static/documentation_images/endpoint_non_existent.JPG)
+When updated the status of a particular task the fields that where not specified on the submit dictionary where being reasigned to none 
 
-This one was a tough one for me, as I changed the name of some of the templates, the endpoint was not being built properly as it was still pointing to non-existing pages.
+![Issue before](static/images/error_2_changed_status.png)
+> I fixed this by using the already existing fields from the forms.
 
-> I fixed this by updating the relevant python functions with the new names of the html pages that flask was pointing to.
+![Issue after](static/images/error_two_after.png)
 
-![resolved](assets/readme-images/counter1.png)
 
+* ### Task not being filter by date in Overview page
+
+![Issue fixed](static/images/error_3_task_date.png)
+
+In the overview page the daily tasks div was not displaying the specific tasks for that day.
+
+> I fixed this by using pythonds date time module and filtering the tasks based on it.
+ 
+
+ * ### Admin overview section not being displayed 
+
+![Issue before](static/images/error_4_admin_typo_fe.png)
+
+As a result of a typo in the way that the admin user name , and entire section was not being displayed.
+
+> I fixed this by checking the correct username and replacing it.
+
+![Issue fixed](static/images/error_4_admin_typo.png)
 
 ## Performance testing
 
