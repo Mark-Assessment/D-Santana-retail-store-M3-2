@@ -237,18 +237,16 @@ The following features could be added in the future, given more development time
 
 1. [GitHub](https://github.com/) - Used for version control.
 2. [GitPod](https://gitpod.io/) - Used to write all code and test before deploying to GitHub.
-3. [Mockplus](https://mockplus.com/) - Used to produce design wireframes.
-4. [Materialize](https://materializecss.com/) - Materialize CSS framework used extensively to create layout and styling of site.
-5. [jQuery](https://jquery.com/) - Used to initialise Materialize components and validate select elements.
-6. [Python 3.8](https://www.python.org/) - Used to code the application.
-7. [MongoDB](https://www.mongodb.com/) - Used for the application's database.
+3. [Materialize](https://materializecss.com/) - Materialize CSS framework used extensively to create layout and styling of site.
+4. [jQuery](https://jquery.com/) - Used to initialise Materialize components and validate select elements.
+5. [Python 3.8](https://www.python.org/) - Used to code the application.
+6. [MongoDB](https://www.mongodb.com/) - Used for the application's database.
 7. [Flask](https://palletsprojects.com/p/flask/), [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) and [Werkzeug](https://palletsprojects.com/p/werkzeug/) - Used to build the main application structure, page templates (Jinja) and account security (Werkzeug).
 8. [PyMongo](https://github.com/mongodb/mongo-python-driver) - Used to connect Python with MongoDB
 9. [Heroku](https://heroku.com/) - Used to deploy the site.
 10. [W3C.org](https://www.w3.org/) - W3C [HTML Validator](https://validator.w3.org/nu/) and [CSS Validator](https://jigsaw.w3.org/css-validator/validator) used to check HTML and CSS code for errors.
 11. [JSHint](https://jshint.com/) - Used to check JavaScript for errors.
 12. [PEP8 Online](http://pep8online.com/) - Used to check Python code for errors.
-13. [Kaffeine Heroku](http://kaffeine.herokuapp.com/) -Used to ensure that heroku page doesn't hibernate (Note that page goes to 'sleep' at midnight until 6 am and is not available during those 6 hours)
 
 
 ***
@@ -263,7 +261,7 @@ The following features could be added in the future, given more development time
 ## Compatibility testing
  Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in Chrome developer tools. 
  
- I tested on hardware devices such as: Ipad air with iOS, Iphone 13 mini with iOS 15.4, Macbook air with MacOS and Surface Pro with windows 10
+ I tested on hardware devices such as: Ipad air with iOS, Iphone 13 , Macbook air with MacOS and Surface Pro with windows 10.
 
 
 ---
@@ -317,9 +315,10 @@ Screenshots are presented below:
 
 
 Final results:
-![performance_final](static/documentation_images/light_house_testing.png)
+![performance_final](static/images/lighthouse-result.png)
 
-I noticed that this tests scores vary from time to time and depends on external libraries as well. 
+I noticed that this tests scores vary from time to time and depends on external libraries as well.
+I recognize that I could improve perfomance by resizing the images. 
 
 
 
@@ -328,19 +327,16 @@ I noticed that this tests scores vary from time to time and depends on external 
  
  * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS
 
- ![CSS validator](static/documentation_images/css_validation.png)
+ ![CSS validator](static/images/css-validator.png)
 
  * [Nu Html Checker](https://validator.w3.org/) to test HTML
 
- ![HTML validator](static/documentation_images/home_html_validation.png)
+ ![HTML validator](static/images/html-validation.png)
 
  * [JShint](https://jshint.com/) to test JavaScript
 
- ![JS validator](static/documentation_images/javascript_va;idation.png)
+ ![JS validator](static/images/js-validator.png)
  
- * [Pep8](https://pypi.org/project/pep8/) to test python
-
- ![JS validator](static/documentation_images/pep8_validation.png)
 
 
 

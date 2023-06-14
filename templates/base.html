@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200;1,300&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" href="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
     <title>Task Manager</title>
@@ -44,23 +44,25 @@
         </nav>
 
         <!-- mobile sidenav -->
-        <ul class="sidenav black" id="mobile-demo">
-            <div class="navmobileee">
-            <li> <h4 class="center-align light-white-text">Task Tracker</h4></li>
-            <li><a href="{{ url_for('get_tasks') }}" class="white-text">Home</a></li>
-            {% if session.user %}
-            {% if session.user|lower == "administrator"|lower %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}" class="white-text">Overview</a></li>
-            <li><a href="{{ url_for('add_task') }}"class="white-text" >New Task</a></li>
-            <li><a href="{{ url_for('get_categories') }}" class="white-text">Manage Team</a></li>
-            {% endif %}
-            <li><a href="{{ url_for('logout') }}" class="white-text">Log Out</a></li>
-            {% else %}
-            <li><a href="{{ url_for('login') }}" class="white-text">Log In </a></li>
-            <li><a href="{{ url_for('register') }}" class="white-text">Register</a></li>
-            {% endif %}
+        <div class="navmobileee">
+            <ul class="sidenav black" id="mobile-demo">
+                <li>
+                    <h4 class="center-align light-white-text">Task Tracker</h4>
+                </li>
+                <li><a href="{{ url_for('get_tasks') }}" class="white-text">Home</a></li>
+                {% if session.user %}
+                {% if session.user|lower == "administrator"|lower %}
+                <li><a href="{{ url_for('profile', username=session['user']) }}" class="white-text">Overview</a></li>
+                <li><a href="{{ url_for('add_task') }}" class="white-text">New Task</a></li>
+                <li><a href="{{ url_for('get_categories') }}" class="white-text">Manage Team</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}" class="white-text">Log Out</a></li>
+                {% else %}
+                <li><a href="{{ url_for('login') }}" class="white-text">Log In </a></li>
+                <li><a href="{{ url_for('register') }}" class="white-text">Register</a></li>
+                {% endif %}
+            </ul>
         </div>
-        </ul>
     </header>
 
     <section>

@@ -55,7 +55,7 @@ def register():
         flash("Registration Successful")
         return redirect(url_for("get_tasks", username=session["user"]))
 
-      # Retrieve users from the database
+        # Retrieve users from the database
     return render_template("register.html")
 
 
@@ -100,10 +100,9 @@ def profile(username):
             tasks = mongo.db.tasks.find({"due_date": today.strftime("%Y-%m-%d")})
             users = mongo.db.users.find()
             return render_template("profile.html", username=username, users=users, tasks=tasks)
-    
+
     # User is not logged in, redirect to the login page
     return redirect(url_for("login"))
-   
 
 
 @app.route("/logout")
