@@ -1,8 +1,8 @@
 # Retail Task Manager website
 
-![Mockup of Retail Task Manager on desktop, tablet and mobile](static/documentation_images/am_I_responsive.png)
+![Mockup of Retail Task Manager on desktop, tablet and mobile](static/images/live-responsive-image.png)
 
-[Visit the live site](https://pooltesting-buddy.onrender.com).
+[Visit the live site](https://dome-task-manager.herokuapp.com/get_tasks).
 
 The purpose of this application is to facilitate the completion of day-to-day tasks for managers, supervisors and keyholders in a retail store, thereby enhancing operational efficiency.
 
@@ -74,6 +74,8 @@ The site uses the Materialize framework. I used Materialize's purple darken and 
 * [Font Awesome 6](https://fontawesome.com/) icons are used throughout the site to illustrate buttons.
 
 * [Pexels](https://www.pexels.com/) I used a retail shop image for the home page.![Home page](static/images/background-picture.png)
+
+* [Pexels](https://www.pexels.com/) I used this marble photo for faq page.![faq page](static/images/marble.png)
 
 * [Unsplash](https://unsplash.com/) I used a welcome picture for the Log in page.![Welcome website picture ](static/images/welcome-picture-login.png)
 
@@ -347,7 +349,7 @@ I recognize that I could improve perfomance by resizing the images.
 
 ### Forking the GitHub Repository
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/yoesk8/pooltesting_buddy_PP3)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/domenicasantana/milestone3-project-retail-task-manager)
 2. At the top right of the page, click the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
@@ -357,7 +359,7 @@ You can download the project source code as a zip file by clicking the 'Code' dr
 
 If you have Git installed on your computer, you can clone the project by following these steps:
 
-1. Log in to GitHub and locate the [repository](https://github.com/yoesk8/pooltesting_buddy_PP3)
+1. Log in to GitHub and locate the [repository](https://github.com/domenicasantana/milestone3-project-retail-task-manager)
 2. Click the 'Code' dropdown at the top right of the file navigation window.
 3. Copy the link under 'Clone' and 'HTTPS' to clone the repository using HTTPS.
 4. Open Git Bash
@@ -365,13 +367,13 @@ If you have Git installed on your computer, you can clone the project by followi
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/yoesk8/pooltesting_buddy_PP3
+$ git clone https://github.com/domenicasantana/milestone3-project-retail-task-manager
 ```
 7. Press Enter. Your local clone will be created.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://github.com/yoesk8/pooltesting_buddy_PP3)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://github.com/domenicasantana/milestone3-project-retail-task-manager)
 
 ### Database Setup
 
@@ -379,36 +381,34 @@ The project uses MongoDB, so for either local or remote deployment you'll need a
 
 1. If you don't have a MongoDB account, sign up for a free account at [MongoDB](https://www.mongodb.com/).
 2. If you don't have any clusters, create a new cluster.
-3. Add a new database to your cluster with the name: **pooltesting_buddy**
-4. The pooltesting_buddy database should have three collections with the following setup:
+3. Add a new database to your cluster with the name: **retail-task-manager**
+4. The retail-task-manager database should have three collections with the following setup:
+
+**categories**
+```
+_id: <ObjectId>
+status: <string>
+```
+
+**tasks**
+```
+_id: <ObjectId>
+status: <string>
+task_name: <string>
+assigned_to: <string>
+task_description: <string>
+is_urgent: <string>
+due_date: <string>
+created_by: <string>
+```
 
 **users**
 ```
 _id: <ObjectId>
 username: <string>
-name: <string>
 password: <string>
-```
-
-**pool_type**
-```
-_id: <ObjectId>
-max_batherload: <string>
-type: <string>
-```
-
-**readings**
-```
-_id: <ObjectId>
-date: <string>
-time: <string>
-pool_type: <string>
-free_chlorine: <string>
-total_chlorine: <string>
-combined_chlorine: <string>
-ph: <string>
-water_temperature: <string>
-outside_parameters: <string>
+department: <string>
+name: <string>
 ```
 
 
@@ -469,7 +469,7 @@ os.environ.setdefault("ENV_DEBUG", "True")
 
 ### Remote Deployment
 
-The app is currently deployed on Heroku [here](https://pooltesting-buddy.herokuapp.com/).
+The app is currently deployed on Heroku [here](https://dome-task-manager.herokuapp.com/get_tasks).
 
 To deploy your own copy of the app, follow the steps below:
 
