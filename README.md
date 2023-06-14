@@ -175,22 +175,22 @@ There is only one admin user on the website who has the following privileges: cr
 
 ### FAQ
 
-New users are adviced to visit the F.A.Q page at the home screen. The FAQ page has answers to common questions.
+New users are adviced to visit the F.A.Q page at the home screen. The FAQ page covers a wide range of topics related to the Task Manager platform, including account management, task creation, status updates, and more.
 
+* The FAQ page provides answers to common questions  Users can find detailed instructions for how to complete a test here.
 
-* The FAQ page provides answers to common questions in a collapsible accordion. Users can find detailed instructions for how to complete a test here.
-
-![FAQ accordion](static/documentation_images/faq.png)
-
+![FAQ page](static/images/faq-page-home.png)
 
 
 ***
 
 ## Database Design
 
-PoolTesting buddy uses the MongoDB non-relational database. Data is divided into three collections, with the following schema:
+Task Manager uses the MongoDB non-relational database. Data is divided into three collections, with the following schema:
 
-![Datbase diagram](static/documentation_images/database_design.png)
+![Datbase scheme](static/images/data-scheme.png)
+
+![Logic workchart](static/images/logic-workchart.png)
 
 ***
 
@@ -203,18 +203,18 @@ The following features could be added in the future, given more development time
 * Helpful account management tools could be provided, such as the ability to update usernames, email addresses and passwords.
 * A password recovery by email function could also be provided. The [flask-security](https://pythonhosted.org/Flask-Security/features.html) extension can provide this functionality, as well as some other more advanced account management tools.
 
-### 2. Additional Log Filters
+### 2. Collaborative Task Comments
 
-* Admin user to be able to filter the log page by date range.
+* Introduce a feature that enables users to leave comments and engage in discussions directly within the task interface. This will facilitate seamless communication among team members, allowing for real-time updates, clarifications, and collaboration on specific tasks. It promotes better teamwork and ensures everyone stays on the same page.
 
+## 2. Inventory Management Page
 
-### 3. Simplification of the add readings form
+* Incorporate an inventory management module into the Task Manager website, allowing users to track and manage stock levels of products in real-time. Users can create tasks related to inventory management, such as restocking, inventory counts, or product updates, ensuring that the retail shop always has accurate and up-to-date inventory information
 
-* Eliminating the "Combined chlorine selection option and just subtracting the Total minus the free and populating that area accordingly
+### 3. Advanced Reporting and Analytics
 
-### 4. Email notification to the admin when readings are outside parameters
+* Implement comprehensive reporting and analytics capabilities that provide users with valuable insights into task and project performance. Users will be able to generate detailed reports, track progress, monitor team productivity, and identify areas for improvement. This feature will empower users with data-driven decision-making, enabling them to optimize task management strategies .
 
-* Admin to automatically receive an email whenever readings are outside parameters and action is needed
 
 ### 5. Code optimization and refactoring
 
