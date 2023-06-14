@@ -73,9 +73,9 @@ The site uses the Materialize framework. I used Materialize's purple darken and 
 
 * [Font Awesome 6](https://fontawesome.com/) icons are used throughout the site to illustrate buttons.
 
-* [Pexels](https://www.pexels.com/) I used a retail shop image for the home page.(static/images/background-picture.png)
+* [Pexels](https://www.pexels.com/) I used a retail shop image for the home page.![Home page](static/images/background-picture.png)
 
-* [Unsplash](https://unsplash.com/) I used a welcome picture for the Log in page.(static/images/welcome-picture-login.png)
+* [Unsplash](https://unsplash.com/) I used a welcome picture for the Log in page.![Welcome website picture ](static/images/welcome-picture-login.png)
 
 ### Wireframes
 
@@ -127,35 +127,38 @@ The site is responsively designed to adapt to the user's viewing device.
 ### User Accounts
 
 Task Manager features a user account system that allows ordinary users to create an account using a unique username and password. Once logged in, users can update the status of their assigned tasks. If no tasks have been assigned to them, they can still view all tasks on the website but cannot update their status.
-There is only one admin user on the website who has the following privileges: creating tasks and assigning them to each team member, specifying deadlines and departments if urgent. The admin user can also edit existing tasks in the database and delete them as needed. Furthermore, the admin user has access to the overview page, which includes two different charts: "My Daily Charts" and a chart displaying team members' names and departments.
+There is only one admin user on the website who has the following privileges: creating tasks and assigning them to each team member, specifying deadlines and departments if urgent. The admin user can also edit existing tasks in the database and delete them as needed. Furthermore, the admin user has access to the overview page, which includes two different charts: "My Daily Charts" and a chart displaying "team members" names and departments.
 
 * Users create accounts by filling in a simple registration form.
 
-![Registration form](static/documentation_images/sign_up_screenshot.png)
-
 * Users sign in to their accounts by filling in a login form and sign out using a link in the navigation bar.
-
-![Login form](static/documentation_images/login_screenshot.png)
 
 * The application uses the Flask session object to handle user login functionality and passwords are hashed using Werkzeug helper functions.
 
-### Pool tests Log
+### Adding task as admin
 
-The core feature of PoolTest buddy is a log allowing users to record their completed pool tests. Full CRUD (create, read, update, delete) functionality is implemented for tests logs, so the admin user can add, delete and edit their records as he wishes while regular users can only add logs.
+. Task Manager offers a comprehensive feature set that includes full CRUD functionality for the administrator user.Full CRUD (create, read, update, delete), the administrator has complete control over managing tasks and team members.They can effortlessly create new tasks, assign them to team members, and set deadlines or urgency levels. Lastly, should the need arise, the administrator can delete tasks from the system.
 
-* Tests logs are added by completing a form, which is linked to from buttons on the New reading page.
+* The process begins by accessing the task creation feature, where you can provide essential details such as the task name, description,date and any specific instructions or requirements.
 
-![Add workout logs by filling a form](static/documentation_images/add_reading_screenshot.png)
+![Add workout logs by filling a form](static/images/how-to-create-tasks.png)
 
-* All test logs are listed on the home page.
+* All tasks are listed on the home page.
 
-![List of tests logs](static/documentation_images/readings_screenshot.png)
+![List of tasks example](static/images/examples-of-alltasks-page.png)
 
 
-* When editing a log entry, the form is prepopulated with the current values of that log.
+* Once the task is assigned, the team members will be able to see that task in the home page  and can access them through their individual user accounts.
 
-![Prepopulated edit log form](static/documentation_images/edit_reading.png)
+![See task in normal user account only if it has been assigned to that user](static/images/user-changestatus-assigned.png)
 
+* As the administrator, you have access to a dedicated "Manage Team" page, which serves as a central hub for overseeing and managing your team members. This page provides you with a view of all team members registered on the platform. From here, you can  add new members to the team by entering their relevant information, such as their names, departments or if needed you can delete the user.
+
+![Admin view Manage Team](static/images/manage-team-admin-page.png)
+
+* Admin Overview page: The page showcases two distinct charts: "My Daily Tasks" and "My Team". The "My Daily Tasks" chart provides a visual representation of your own task assignments.
+
+![Admin Overview Page](static/images/overview-admin-page.png)
 ### Pool test Management
 
 
