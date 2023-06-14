@@ -152,24 +152,25 @@ There is only one admin user on the website who has the following privileges: cr
 
 ![See task in normal user account only if it has been assigned to that user](static/images/user-changestatus-assigned.png)
 
-* As the administrator, you have access to a dedicated "Manage Team" page, which serves as a central hub for overseeing and managing your team members. This page provides you with a view of all team members registered on the platform. From here, you can  add new members to the team by entering their relevant information, such as their names, departments or if needed you can delete the user.
+* As the administrator, you have access to a dedicated "Manage Team" page, which serves as a central hub for overseeing and managing your team members. This page provides you with a view of all team members registered on the platform. From here, you can edit their names, departments or if needed you can delete the user.
 
 ![Admin view Manage Team](static/images/manage-team-admin-page.png)
 
 * Admin Overview page: The page showcases two distinct charts: "My Daily Tasks" and "My Team". The "My Daily Tasks" chart provides a visual representation of your own task assignments.
 
 ![Admin Overview Page](static/images/overview-admin-page.png)
-### Pool test Management
 
 
-* By design, users cannot edit or delete the pool test records, as this prevents altering of previous records which could cause issues. However, the ‘admin’ user account can add, edit or delete records. This allows the site admin to make changes to the any error a normal user might have comitted while also adding a barrier to avoid dishonest behaviour.
+### Regular User 
 
-![Admin view of previous test](static/documentation_images/admin_edit.png)
+* Firstly, you can effortlessly view all the tasks assigned specifically to you. Upon logging into your user account, you'll be greeted with a personalized dashboard that displays a comprehensive list of tasks tailored to your responsibilities. 
+
+![Admin view of previous test](static/images/just-task-assigned-to-user.png)
 
 
-*  When editing a test, the form is prepopulated with the current values of that routine.
+* Secondly, Task Manager enables you to easily update the status of the tasks assigned to you. Whether you've completed a task or need to provide an update, you can conveniently modify the task status within the system.
 
-![Edit test logs are prepopulated](static/documentation_images/edit_reading.png)
+![Edit test logs are prepopulated](static/images/status-user-feature.png)
 
 
 ### FAQ
