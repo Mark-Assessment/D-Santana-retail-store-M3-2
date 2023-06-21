@@ -263,7 +263,24 @@ The following features could be added in the future, given more development time
 ## Compatibility testing
  Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in Chrome developer tools. 
  
- I tested on hardware devices such as: Ipad air with iOS, Iphone 13 , Macbook air with MacOS and Surface Pro with windows 10.
+ I tested on hardware devices such as: Ipad air with iOS, Iphone 12 Pro , Macbook air with MacOS and Surface Pro with windows 10.
+
+ ![Iphone 12 PRO ](static/images/iphone12-compability.png)
+
+ ![Ipad Air ](static/images/ipadair-compability.png)
+
+## Browser Compability
+
+The siteyhas being tested on these three browsers that I have available to me on my macbook air computer. The site works exactly the same accross all 3 browsers. I tested for the website all features.
+
+* Firefox
+* DuckDuckGo
+* Chrome
+
+![Firefox](static/images/firefox-website.png)
+
+![Duckduckgo](static/images/duck-duck-go-website.png)
+
 
 
 ---
