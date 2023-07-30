@@ -355,6 +355,10 @@ I recognize that I could improve perfomance by resizing the images.
  * [JShint](https://jshint.com/) to test JavaScript
 
  ![JS validator](static/images/js-validator.png)
+
+* [Code Institute Python Validator](https://pep8ci.herokuapp.com/) to validate python
+
+ ![Python validator](static/images/ci-python.png)
  
 
 
