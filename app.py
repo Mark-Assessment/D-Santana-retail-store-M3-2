@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -69,7 +69,7 @@ def login():
         if existing_user:
             # Check to ensure hashed password matches User input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome Back, {}".format(
                     request.form.get("username")))
@@ -78,12 +78,12 @@ def login():
             else:
                 # User invalid password match
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))    
+                return redirect(url_for("login"))
 
         else:
             # Username doesnt exist
-            flash("Incorrect Username and/or Password") 
-            return redirect(url_for("login"))          
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -97,9 +97,11 @@ def profile(username):
         if user:
             username = user["username"]
             today = datetime.date.today()
-            tasks = mongo.db.tasks.find({"due_date": today.strftime("%Y-%m-%d")})
+            tasks = mongo.db.tasks.find({
+                "due_date": today.strftime("%Y-%m-%d")})
             users = mongo.db.users.find()
-            return render_template("profile.html", username=username, users=users, tasks=tasks)
+            return render_template(
+                "profile.html", username=username, users=users, tasks=tasks)
 
     # User is not logged in, redirect to the login page
     return redirect(url_for("login"))
@@ -154,7 +156,8 @@ def edit_task(task_id):
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     users = mongo.db.users.find().sort("status", 1)
     categories = mongo.db.categories.find().sort("status", 1)
-    return render_template("edit_task.html", task=task, users=users, categories=categories)
+    return render_template(
+        "edit_task.html", task=task, users=users, categories=categories)
 
 
 @app.route("/edit_task_status/<task_id>", methods=["GET", "POST"])
@@ -173,10 +176,10 @@ def edit_task_status(task_id):
         mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {"$set": submit})
         flash("Task Successfully Updated")
         return redirect(url_for("get_tasks"))
-  
-    categories = mongo.db.categories.find().sort("status", 1)
-    return render_template("edit_task_status.html", task=task, categories=categories)
 
+    categories = mongo.db.categories.find().sort("status", 1)
+    return render_template(
+        "edit_task_status.html", task=task, categories=categories)
 
 
 # Delete function for manage categories section with admin user
@@ -193,7 +196,7 @@ def get_categories():
     return render_template("categories.html", users=users)
 
 
-# Categories that Admin can see on his session 
+# Categories that Admin can see on his session
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
